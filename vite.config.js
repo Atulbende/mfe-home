@@ -9,10 +9,20 @@ export default defineConfig({
       name: 'home',
       filename: 'remoteEntry.js',
       exposes: {
-        './App': './src/App.jsx',
+        './Home': './src/Home.jsx',
       },
       shared: ['react', 'react-dom'],
     }),
   ],
-  server: { port: 3002 },
+  server: {
+    port: 3002,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
+  },
+  build: {
+    target: 'esnext',
+    minify: false,
+    cssCodeSplit: false,
+  },
 });

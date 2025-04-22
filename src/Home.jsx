@@ -1,4 +1,4 @@
-function App() {
+function Home() {
   return (
     <div className="p-8">
       <h1 className="text-xl font-bold">Welcome to Home Page</h1>
@@ -6,4 +6,4 @@ function App() {
     </div>
   );
 }
-export default App;
+export default Home;

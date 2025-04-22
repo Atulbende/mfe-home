@@ -7,9 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "concurrently \"vite build --watch\" \"vite preview --port 3002\""
   },
   "dependencies": {
+    "concurrently": "^9.1.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
